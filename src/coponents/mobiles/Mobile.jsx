@@ -1,9 +1,8 @@
 import { FaRegHeart } from "react-icons/fa";
 
-const Mobile = ({ data }) => {
-  console.log(data);
+const Mobile = ({ data, handleAddCart }) => {
   return (
-    <div className="border  rounded-md">
+    <div className="bg-blue-200 border-2 rounded-t-md border-blue-200">
       <div className="">
         <img className="w-full h-full" src={data.image_url} alt="" />
       </div>{" "}
@@ -11,8 +10,11 @@ const Mobile = ({ data }) => {
         <span>{data.name}</span>
 
         <div className="flex justify-between ">
-          <span>{data.price_bdt}</span>
-          <button>
+          <button
+            onClick={() => {
+              handleAddCart(data);
+            }}
+          >
             <FaRegHeart />
           </button>
         </div>
