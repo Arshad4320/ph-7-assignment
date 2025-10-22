@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Mobiles from "./coponents/mobiles/Mobiles";
-
+import { IoClose } from "react-icons/io5";
 function App() {
   const [mobile, setMobile] = useState([]);
 
